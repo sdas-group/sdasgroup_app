@@ -1,0 +1,24 @@
+.AccountingStudentDetail {
+    background: #f5f5f5;
+    width: 70%;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}    
+
+.AccountingStudentDetailOrderList {
+    list-style:none;
+}
+
+.AccountingStudentDetailOrderList > li {
+    padding: 10px;
+    border-top: 1px solid #6091ba;
+    border-bottom: 1px solid #6091ba;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+    .AccountingStudentDetail {
+        width: 100%;
+    }
+}

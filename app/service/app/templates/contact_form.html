@@ -1,0 +1,117 @@
+{% extends "layout/index.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+    <header class="page-heading clearfix">
+        <h1 class="heading-title pull-left">Contact</h1>
+
+        <div class="breadcrumbs pull-right">
+            <ul class="breadcrumbs-list">
+                <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                <li class="current">Contact</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page-content ContactForm">
+        <div class="row">
+            <article class="contact-form col-md-8 col-sm-7 page-row">
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <p>{{ contact_form.name.label }}</p>
+                        {% render_field contact_form.name class+="form-control" %}
+                        {{ contact_form.name.errors }}
+                    </div><!--//form-group-->
+
+                    <div class="form-group">
+                        <p>{{ contact_form.email.label }}</p>
+                        {% render_field contact_form.email class+="form-control" %}
+                        {{ contact_form.email.errors }}
+                    </div><!--//form-group-->
+
+                    <div class="form-group">
+                        <p>{{ contact_form.phone.label }}</p>
+                        {% render_field contact_form.phone class+="form-control" %}
+                        {{ contact_form.phone.errors }}
+                    </div><!--//form-group-->
+
+                    <div class="form-group message">
+                        <p>{{ contact_form.message.label }}</p>
+                        {% render_field contact_form.message class+="form-control" %}
+                        {{ contact_form.message.errors }}
+                    </div><!--//form-group-->
+                    
+                    <div class="actions">
+                        <button type="submit" class="btn btn-success">Send message</button>
+                    </div>
+                </form> 
+            </article>
+
+            <aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">
+                <section class="widget has-divider">
+                    <h3 class="title">Visit us</h3>
+                    <p class="tel"><i class="fa fa-info"></i>sdas-group.com</p><span class="adr-group"></span>
+                </section>
+                
+                <section class="widget">
+                    <h3 class="title">Contact us</h3>
+                    <p class="tel"><i class="fa fa-phone"></i>Phones: +212 665396851</p>
+                    <p class="tel"><i class="fa fa-envelope"></i>contact(at)sdas-group.com
+                </section>   
+            </aside>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+$(function() {
+    'use strict';
+
+    $('.ContactForm form').validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                email: true,
+                required: true
+            },
+            phone: {
+                minlength: 4,
+                required: true
+            },
+            message: {
+                minlength: 10,
+                maxlength: 1000,
+                required: true
+            }
+        },
+        messages: {
+            name: {
+                required: 'This field is required'
+            },
+            email: {
+                required: 'This field is required',
+                minlength: 'Please, type at least 4 characters'
+            },
+            phone: {
+                email: 'Please type a valid email',
+                required: 'This field is required'
+            },
+            message: {
+                required: 'This field is required',
+                minlength: 'Please type at least 4 characters',
+                maxlength: 'Please dont enter more than 1000 characters'
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

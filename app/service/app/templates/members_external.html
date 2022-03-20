@@ -1,0 +1,149 @@
+{% extends "layout/index.html" %}
+{% load static %}
+
+{% block title %}Members{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">External Collaborators</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Members: External</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <div class="page-content">
+                <div class="row page-row">
+                        <div class="news-wrapper col-md-10 col-sm-7">                       
+                            <article class="news-item page-row has-divider clearfix row">
+                                <header class="page-heading clearfix">
+                                </header>
+                                
+                                {% for member in members %}
+                                {% ifequal member.id 10 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="https://scholar.google.com/citations?user=tiN96JEAAAAJ&hl=en">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% ifequal member.id 12 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="https://scholar.google.com/citations?hl=en&user=M90VO-0AAAAJ">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% ifequal member.id 52 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="https://scholar.google.com/citations?user=uG02nc0AAAAJ&hl=da">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% ifequal member.id 100 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="https://www.linkedin.com/in/apolanco3225/">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% ifequal member.id 106 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="http://www.ingenieria.utalca.cl/Participante/Detalles/67">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% ifequal member.id 26 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="https://www.researchgate.net/profile/David-Bastidas-4">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                            </article><!--//news-item-->
+                        </div>
+                </div>
+            </div>
+{% endblock content %}
