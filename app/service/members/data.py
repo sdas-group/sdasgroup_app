@@ -1,3 +1,4 @@
+MEMBER_CHOICES_IN = 30
 MEMBER_CHOICES_SR = 40
 MEMBER_CHOICES_PDR = 50
 MEMBER_CHOICES_ET = 60
@@ -16,22 +17,23 @@ MEMBER_CHOICES_VM = 180
 MEMBER_CHOICES_HG = 190
 
 MEMBER_CHOICES = (
+    (MEMBER_CHOICES_IN, 'Interns'),
     (MEMBER_CHOICES_SR, 'Senior Researchers'),
     (MEMBER_CHOICES_PDR, 'Postdoctoral Researchers'),
-    (MEMBER_CHOICES_HR, 'Honorary Researchers'),
+    (MEMBER_CHOICES_HR, 'Honorary Research Fellows'),
     (MEMBER_CHOICES_PR, 'Principal Researchers'),
     (MEMBER_CHOICES_AR, 'Associate Researchers'),
     (MEMBER_CHOICES_ER, 'Collaborator Researchers'),
-    (MEMBER_CHOICES_PS, 'PhD Students'),
-    (MEMBER_CHOICES_MS, 'Master Students'),
-    (MEMBER_CHOICES_VO, 'Junior'),
+    (MEMBER_CHOICES_PS, 'Research Assistants - Level III'),
+    (MEMBER_CHOICES_MS, 'Research Assistants - Level II'),
+    (MEMBER_CHOICES_VO, 'Junior Researchers'),
     (MEMBER_CHOICES_AA, 'Administrative Assistant'),
     (MEMBER_CHOICES_WM, 'Web Master'),
     (MEMBER_CHOICES_VM, 'Volunteer'),
     (MEMBER_CHOICES_HG, 'Head of the Group'),
-    (MEMBER_CHOICES_DS, 'Degree Students'),
+    (MEMBER_CHOICES_DS, 'Research Assistants - Level I'),
     (MEMBER_CHOICES_FS, 'Former Members'),
-    (MEMBER_CHOICES_ET, 'Editor & Translator'),
+    (MEMBER_CHOICES_ET, 'Analyst'),
 )
 
 ACTIVE_CHOICES_S = 200
