@@ -1,0 +1,262 @@
+{% extends "layout/index.html" %}
+{% load static %}
+
+{% block title %}Members{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">{{ single_member.full_name }}</h1>
+                </header> 
+            </div>
+            <div class="page-content">
+                <div class="row page-row">
+                        <div class="news-wrapper col-md-10 col-sm-7">                         
+                            <article class="news-item page-row has-divider clearfix row">       
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <img class="img-responsive" style="width: 400px; height: auto;" src="{{ single_member.photo.url }}" alt="" />
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p><b>Email: {{ single_member.email }}
+                                    {% if single_member.website %} 
+                                    | website: <a target="_blank" href="{{ single_member.website }}">{{ single_member.website }} 
+                                    {% endif %}
+                                    </a></b></p>
+                                </div>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    {% if single_member.description %}
+                                    <p style="text-align: justify; alignment-adjust: auto">{{ single_member.description }}</p>
+                                    {% endif %}
+                                    <h4 class="title">Research Interests</h4>
+                                    <p style="text-align: justify; alignment-adjust: auto"><span style="text-align: left;">{{ single_member.research_interest }}</p>
+
+                                    {% ifequal single_member.id 80 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https%3A%2F%2Fwww.diegopeluffo.com%2Fsdas_group_bib_80.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 1 %}
+                                    <script src="https://bibbase.org/service/mendeley/aba9653c-d139-3f95-aad8-969c487ed2f3/group/b9022d50-068c-31b4-9174-ebfaaf9ee57b?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 40 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/e5f1b339-ec56-313b-b123-fd0a1c527f0d?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 15 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/f4bee9c8-c485-33cf-b9d4-7424ce07c46d?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 2 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/17f86f46-e4c7-3593-b10d-91df3c368d3c?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 30 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/238/0929.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 31 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/967c9de0-8d3c-3991-bbe2-1cf187e121df?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 22 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/333dc3ab-20ce-3188-9e6f-93c572fadeda?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 14 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/dcbddeb4-43a7-32ca-8726-8f47f33c5362?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 74 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/db6e6aab-fd37-3eb4-a783-8d5b130a8825?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 82 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/278/0078.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 85 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/301/6684.bib&jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 17 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/217/7819.bib&json=1&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 81 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/04/4922.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 27 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/201/2045.bib&jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 7 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/195/0831.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 90 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/1f106135-ca78-3870-8c16-a043902cb334?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 9 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/180/6201.bib&jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 6 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/195/0864.bib&jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 98 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/ab671682-19b4-3dc7-aa8e-f674831dab33?jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 20 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/227/6163.bib&jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 23 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/219/9952.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 63 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/238/0950.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 67 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/4b366377-87c3-3302-b214-7d3d9dbf677f?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 68 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/service/mendeley/30760c69-3efa-3207-b837-b316a826a3ab?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 41 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/227/6178.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 79 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/262/6547.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 86 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/217/7831.bib&jsonp=1"></script>
+                                    {% endifequal %}
+                                    
+                                    {% ifequal single_member.id 84 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/277/9577.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 5 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/217/7820.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 18 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/219/9878.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 43 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/275/6379.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 66 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/263/1181.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 78 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/275/6447.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 94 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/268/9075.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 83 %}
+                                    <h4 class="title">Publications</h4>
+                                    <script src="https://bibbase.org/show?bib=https://dblp.org/pid/277/8411.bib&jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 102 %}
+                                    <script src="https://bibbase.org/service/mendeley/ea08b3f3-0663-3787-971d-82ac11993544?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 103 %}
+                                    <h4 class="title">Publications</h4>
+                                     <script src="https://bibbase.org/service/mendeley/80ab3d92-eefe-3fd3-b6c2-50d1f885379a?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 56 %}
+                                    <h4 class="title">Publications</h4>
+                                     <script src="https://bibbase.org/service/mendeley/87ca63cb-6234-3429-a14d-4b37645af57b/group/1ab4b95c-b54d-3697-b8de-c460d572d3f2?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 108 %}
+                                    <h4 class="title">Publications</h4>
+                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/300/3825.bib&jsonp=1"></script>
+                                    {% endifequal %}
+           
+                                    <!--{% if Publications %}
+                                    <h4 class="title">Publications</h4>
+                                    <ol>
+                                    {% for Publication in Publications %}         
+                                        <li><b>{{ Publication.title }} <br></b>
+                                        {{ Publication.event_of_publication }}<br />
+                                        {{ Publication.author }} <br />
+                                        <a href="#member_modal_{{ Publication.id }}" role="button" data-toggle="modal">See abstract |</a><a target="_blank" href="{{ Publication.url_publication }}"> see full paper</a>
+
+                                        <div id="member_modal_{{ Publication.id }}" class="modal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title">Abstract</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>{{ Publication.abstract }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    {% endfor %}
+                                    {% endif %}
+                                    </ol>-->
+                                </div>
+                            </article><!--//news-item-->
+                        </div>
+                </div>
+            </div>
+{% endblock content %}

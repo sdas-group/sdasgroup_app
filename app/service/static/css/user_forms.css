@@ -1,0 +1,42 @@
+.PasswordChangeForm {
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.PasswordChangeForm form {
+    width: 40%;
+}
+
+.ProfileForm form, .PasswordChangeForm form, .StudentForm form, .TeacherForm form, .InfoRequestForm form, .AddPurchaseOrderForm form {
+    background: #f5f5f5;
+    width: 60%;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+@media (max-width: 767px) {
+    .ProfileForm form, .PasswordChangeForm form, .StudentForm form, .TeacherForm form, .InfoRequestForm form, .AddPurchaseOrderForm form {
+        width: 100%;
+    }
+}
+
+.CIPurchaseServiceList {
+    margin-bottom: 30px;
+}
+
+.CIPurchaseServiceList > li {
+    border-bottom: 2px solid #6091ba;
+    list-style:none;
+    padding-top: 10px;
+}
+
+.CIPurchaseServiceItemDiv {
+    border-top: 1px dotted #6091ba;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.CIPurchaseServiceName {
+
+}

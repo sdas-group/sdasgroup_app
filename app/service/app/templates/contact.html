@@ -1,0 +1,38 @@
+{% extends "layout/index.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+    <header class="page-heading clearfix">
+        <h1 class="heading-title pull-left">Contact</h1>
+        <div class="breadcrumbs pull-right">
+            <ul class="breadcrumbs-list">
+                <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                <li class="current">Contact</li>
+            </ul>
+        </div>
+    </header>
+ 
+    <div class="col-md-9 col-sm-8">
+        <div class="section-content">
+            <div class="row page-row">
+                <h5>Want to contact us? Please send an email to contact(at)sdas-group.com.</h5>
+                <section class="widget has-divider">
+                    <div class="section-content"> 
+                    <h3 class="title">Visit us</h3>
+                    <p class="tel"><i class="fa fa-info"></i>  sdas-group.com</p><span class="adr-group"></span>
+                </section>
+                        
+                <section class="widget">
+                    <h3 class="title">Contact us</h3>
+                    <p class="tel"><i class="fa fa-phone"></i> Phones: +212 665396851 (WhatsApp)</p>
+                    <p class="tel"><i class="fa fa-envelope"></i> contact(at)sdas-group.com
+                </section>
+            </div>
+        </div>
+    </div>
+</div>  
+
+{% endblock %}

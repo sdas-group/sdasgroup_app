@@ -1,0 +1,50 @@
+{% extends "layout/index.html" %}
+{% load static %}
+
+{% block title %}Documentation{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Machine Learning and Data Analytics</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Machine Learning and Data Analytics</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <div class="page-content">
+                <div class="row page-row">
+                        <div class="news-wrapper col-md-10 col-sm-7">                         
+                            <article class="news-item page-row has-divider clearfix row">
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{% static 'libs/img/machine_learning_data_analytics.png' %}" style="width: 120px; height: 150px;" class="img-responsive" alt=""/>
+                                </figure>       
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h4 class="title">Research Areas</h4>
+                                    <ul>
+                                        <li>Pattern recognition and data mining.</li>
+                                        <li>Time series forecasting.</li>
+                                        <li>Dimensionality reduction and data visualization.</li>
+                                        <li>Clustering.</li>
+                                        <li>Learning from multiple experts.</li>
+                                        <li>Case-based reasoning.</li>
+                                        <li>Spectral, graph-based and kernel-based approaches for data analysis.</li>
+                                        <li>Information quality and data fusion.</li>
+                                        <li>Dynamic data analysis.</li>
+                                    </ul>
+                                </div>
+
+                                <script src="https://bibbase.org/service/mendeley/aba9653c-d139-3f95-aad8-969c487ed2f3/group/baf47cb8-5222-3492-962e-1467155db3dc?jsonp=1"></script>
+
+                            </article><!--//news-item-->
+                        </div>
+                </div>
+            </div>
+{% endblock content %}

@@ -1,0 +1,30 @@
+version: "2"
+services:
+  nginx:
+    extends:
+      file: base.yml
+      service: nginx
+    links:
+      - app
+    ports:
+      - "5001:5001"
+
+  postgres:
+    extends:
+      file: base.yml
+      service: postgres
+    volumes:
+      - ./db-data:/var/lib/postgresql/data/
+
+  app:
+    extends:
+      file: base.yml
+      service: app
+    environment:
+      - DJANGO_SETTINGS_MODULE=service.settings.prod_settings
+    command: sh ./scripts/prod.sh
+    build:
+      args:
+        - DJANGO_ENV=prod
+    links:
+      - postgres

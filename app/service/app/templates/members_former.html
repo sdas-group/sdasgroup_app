@@ -1,0 +1,50 @@
+{% extends "layout/index.html" %}
+{% load static %}
+
+{% block title %}Members{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Members</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Members: Former</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <div class="page-content">
+                <div class="row page-row">
+                        <div class="news-wrapper col-md-10 col-sm-7">                       
+                            <article class="news-item page-row has-divider clearfix row">
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Former Members</h3>
+                                </header>
+                                
+                                {% for member in members %}
+                                {% ifequal member.type_member 70 %}<!-- Former Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Former Member</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                            </article><!--//news-item-->
+                        </div>
+                </div>
+            </div>
+{% endblock content %}

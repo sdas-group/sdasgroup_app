@@ -1,0 +1,291 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>{% block title %}{% endblock %} | SDAS - Smart Data Analysis Systems Group</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="{% static 'libs/img/logo_2.png' %}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>   
+
+    <link rel="stylesheet" href="{% static 'libs/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/plugins/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/plugins/flexslider/flexslider.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/plugins/pretty-photo/css/prettyPhoto.css' %}">
+
+    <link id="theme-style" rel="stylesheet" href="{% static 'libs/css/jquery.datetimepicker.css' %}">
+    <link id="theme-style" rel="stylesheet" href="{% static 'libs/css/styles.css' %}">
+    <link id="theme-style" rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    {% block css %}{% endblock %}
+</head> 
+
+<body class="home-page">
+    <div class="wrapper">
+        
+        {% block header %}
+        <header class="header">  
+            <div class="top-bar">
+                <div class="container">              
+                    <ul class="social-icons col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                        <li><a href="https://www.facebook.com/SDASResearchGroup" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCohLNXCYY-zn6u5CzjwKKRQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        <!-- <li><a href="#" ><i class="fa fa-twitter"></i></a></li> -->
+                        <!-- <li><a href="#" ><i class="fa fa-linkedin"></i></a></li> -->
+                        <!-- <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>          -->
+                        <!-- <li class="row-end"><a href="#" ><i class="fa fa-rss"></i></a></li> -->
+                    </ul>
+
+                    <div class="pull-right contact_phones">
+                        <p>
+                            <span class="glyphicon glyphicon-earphone"></span>
+                            <span>+212 665396851 (WhatsApp)</span><br>
+<!--                             <span class="glyphicon glyphicon-earphone"></span>
+                            <span></span> -->
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            <span>contact(at)sdas-group.com</span>
+<!--                             <span class="glyphicon glyphicon-envelope"></span>
+                            <span></span> -->
+                        </p>
+                    </div>         
+                </div>      
+            </div>
+
+            <div class="header-main container">
+                    <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                        <a href="{% url 'home' %}">
+                            <img id="logo" src="{% static 'libs/img/logo_2.png' %}" style="width: 120px; height: 90px;" alt="Logo" class="pull-left">
+                        </a>
+                    </figure>
+                    <div class="details col-md-10 col-sm-9 col-xs-8">
+                        <h1><a href="{% url 'home' %}">Smart Data Analysis Systems Group</a></h1>
+                    </div>
+            </div><!--//header-main-->
+        </header><!--//header-->
+        {% endblock header %}
+        
+        {% block navbar %}
+        <nav class="main-nav" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>           
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="CIMainNAVnav nav navbar-nav">
+                        <li class="nav-item">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>                         
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Members<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'members_staff' %}">Staff</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'research_board' %}">Research Board</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'members_students' %}">Students</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'volunteer_members' %}">Volunteers</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'members_honorary' %}">Honorary Research Fellows</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'external_members' %}">External Collaborators</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Research <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'research_topics' %}">Research Programs</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.researchgate.net/lab/SDAS-Group-Diego-Peluffo" target="_blank">Research Gate Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'projects' %}">Projects</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'scholarships' %}">Scholarships</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'call_for_projects' %}">Call for projects</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'allpublications' %}">All Publications</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Information<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'manifiesto' %}">A word by our Founder</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'gallery' %}">Gallery</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'material' %}">Material</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'documentation' %}">Documentation</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'termsofuse' %}">Terms of Use</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'gallery' %}">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'repositories' %}">Repositories & software</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'services' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'courses' %}">Courses & Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endblock navbar %}
+
+        <div class="content container">
+
+        {% block content %}
+         <div class="row">
+            <div class="user_menu col-md-3 col-sm-3">
+
+             </div>
+
+            <div class="col-md-9 col-sm-9">
+                {% block usersection %}{% endblock %}
+            </div>
+        </div>
+
+
+        {% endblock content %}
+
+        </div>
+    </div>
+    
+    
+    {% block footer %}
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+                <div class="footer-col col-md-3 col-sm-4 about">
+                    <div class="footer-col-inner">
+                        <h3><a href="{% url 'home' %}">Know about us</a></h3>
+                        <p class="tel clearfix col-md-12 col-sm-4">
+                            <i class="fa fa-youtube-play pull-left"></i>
+                                <span class="pull-left">
+                                    <span><a href="https://www.youtube.com/channel/UCohLNXCYY-zn6u5CzjwKKRQ" target="_blank">Youtube Channel</a></span><br>
+                                </span>
+                        </p>
+                        <p class="tel clearfix col-md-12 col-sm-4">
+                            <i class="fa fa-facebook-official pull-left"></i>
+                                <span class="pull-left">
+                                    <span><a href="https://www.facebook.com/SDASResearchGroup" target="_blank">Facebook Page</a></span><br>
+                                </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-col col-md-5 col-sm-8 newsletter">
+                    <h3><a href="{% url 'home' %}">SDAS Group<a/></h3>
+                    <div class="footer-col-inner">
+                        <div class="row">
+                            <p class="tel clearfix col-md-12 col-sm-4">
+                                <i class="fa fa-linkedin pull-left"></i>
+                                    <span class="pull-left">
+                                        <span><a href="https://www.linkedin.com/company/sdas-research-group" target="_blank">LinkedIn Profile</a></span><br>
+                                    </span>
+                            </p>
+                            <p class="tel clearfix col-md-12 col-sm-4">
+                                <span class="pull-left">
+                                    <span><a href="https://www.researchgate.net/lab/SDAS-Group-Diego-Peluffo" target="_blank">Research Gate Profile</a></span><br>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col col-md-4 col-sm-12 contact">
+                    <h3><a href="{% url 'contact' %}">Contact us</a></h3>
+                    <div class="footer-col-inner">
+                        <div class="row">
+                            <p class="email col-md-12 col-sm-4 clearfix">
+                                <i class="fa fa-envelope pull-left"></i>
+                                    <span class="pull-left">
+                                        <a href="mailto:{{ constance_dict.constance_email_1 }}">contact(at)sdas-group.com</a>
+                            <p class="tel clearfix col-md-12 col-sm-4">
+                                <i class="fa fa-whatsapp pull-left"></i>
+                                    <span class="pull-left">
+                                        <span>+212 665396851 (WhatsApp)</span><br>
+                                    </span>
+                            </p>
+                                    <!-- <a href="mailto:{{ constance_dict.constance_email_2 }}">{{ constance_dict.constance_email_2 }}</a><br> -->
+                                    <!-- <a href="mailto:{{ constance_dict.constance_email_3 }}">{{ constance_dict.constance_email_3 }}</a><br> -->
+                                </span><br>
+                            </p>  
+                        </div> 
+                    </div><!--//footer-col-inner-->            
+                </div><!--//foooter-col-->   
+                </div>   
+            </div>        
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <div class="row">
+                    <small class="copyright col-md-6 col-sm-12 col-xs-12">
+                        Copyright &copy 2017 -  SDAS Research Group. All rights reserved.| <a href="https://sdas-group.com/termsofuse/">Terms of Use <a>| By: <a href="http://mateovergara.com/" target="_blank">mateovergara.com</a>
+                    </small>
+                </div><!--//row-->
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer>
+    {% endblock footer %}
+
+    <!-- Javascript -->          
+    <script type="text/javascript" src="{% static 'libs/plugins/jquery-1.12.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/plugins/bootstrap/js/bootstrap.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'libs/plugins/bootstrap-hover-dropdown.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'libs/plugins/back-to-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/plugins/jquery-placeholder/jquery.placeholder.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/plugins/pretty-photo/js/jquery.prettyPhoto.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/plugins/flexslider/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/plugins/jflickrfeed/jflickrfeed.min.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'libs/js/jquery.validate.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/jquery.datetimepicker.full.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'libs/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+    {% block js %}{% endblock %}
+</body>
+</html> 
+

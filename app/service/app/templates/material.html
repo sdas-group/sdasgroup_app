@@ -1,0 +1,75 @@
+{% extends "layout/index.html" %}
+{% load static %}
+
+{% block title %}Material{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">Material & Resources</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Material & Resources</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <div class="page-content">
+                <div class="row page-row">
+                        <div class="news-wrapper col-md-10 col-sm-7">                         
+                            <article class="news-item page-row has-divider clearfix row">                                
+                                <h3 class="title">Academic material</h3>
+                                {% for repository in repositories %}
+                                {% ifequal repository.type_repository 100 %}
+                                {% if repository.title %}      
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p><a target="_blank" href="{{ repository.url_repository }}">{{ repository.title }}</a></p>
+                                </div>
+                                {% endif %}
+                                {% if repository.year %} 
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p style="text-align: justify; alignment-adjust: auto">{{ repository.year }}</p>
+                                </div>
+                                {% endif %}
+                                {% endifequal %}
+                                {% endfor %}                                
+                            </article><!--//news-item-->
+                            <article class="news-item page-row has-divider clearfix row">
+                                <h3 class="title">Documents</h3>
+                                {% for repository in repositories %}
+                                {% ifequal repository.type_repository 130 %}
+                                {% if repository.title %}      
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p><a target="_blank" href="{{ repository.url_repository }}">{{ repository.title }}</a></p>
+                                </div>
+                                {% endif %}
+                                {% if repository.year %} 
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p style="text-align: justify; alignment-adjust: auto">{{ repository.year }}</p>
+                                </div>
+                                {% endif %}
+                                {% endifequal %}
+                                {% endfor %}
+                            </article>
+                            <article class="news-item page-row has-divider clearfix row">
+                                <h3 class="title">Other resources</h3>
+                                {% for repository in repositories %}
+                                {% ifequal repository.type_repository 140 %}
+                                {% if repository.title %}      
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p><a target="_blank" href="{{ repository.url_repository }}">{{ repository.title }}</a></p>
+                                </div>
+                                {% endif %}
+                                {% if repository.year %} 
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <p style="text-align: justify; alignment-adjust: auto">{{ repository.year }}</p>
+                                </div>
+                                {% endif %}
+                                {% endifequal %}
+                                {% endfor %}
+                            </article>
+                        </div>
+                </div>
+            </div>
+{% endblock content %}
