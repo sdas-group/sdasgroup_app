@@ -53,7 +53,7 @@
                                     <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
                                 </figure>
                                 <div class="details col-md-10 col-sm-9 col-xs-8">
-                                    <h3 class="title"><a target="_blank" href="https://scholar.google.com/citations?hl=en&user=M90VO-0AAAAJ">{{ member.full_name }}</a></h3>
+                                    <h3 class="title"><a target="_blank" href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
                                     <h5 class="title">Email: {{ member.email }} |  Research Engineer</h5>
                                 </div>
                                 <div class="row page-row">
@@ -73,7 +73,7 @@
                                     <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
                                 </figure>
                                 <div class="details col-md-10 col-sm-9 col-xs-8">
-                                    <h3 class="title"><a target="_blank" href="https://scholar.google.com/citations?user=uG02nc0AAAAJ&hl=da">{{ member.full_name }}</a></h3>
+                                    <h3 class="title"><a target="_blank" href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
                                     <h5 class="title">Email: {{ member.email }} |  Research Engineer</h5>
                                 </div>
                                 <div class="row page-row">
