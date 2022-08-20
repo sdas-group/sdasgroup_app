@@ -428,3 +428,6 @@ class MedicalDataAnalysisView(TemplateView):
 
 class SoftwareEngineeringView(TemplateView):
     template_name = 'software_engineering.html'
+
+class ResearchEngineersView(TemplateView):
+    template_name = 'research_engineers.html'

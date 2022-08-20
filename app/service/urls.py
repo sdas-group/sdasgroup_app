@@ -46,6 +46,7 @@ from service.app.views import DigitalSignalProcessingView
 from service.app.views import HumanMachineInteractionView
 from service.app.views import MedicalDataAnalysisView
 from service.app.views import SoftwareEngineeringView
+from service.app.views import ResearchEngineersView
 
 admin.site.site_title = 'SDAS Group'
 admin.site.site_header = 'SDAS Group - Administrator'
@@ -312,6 +313,12 @@ urlpatterns = [
         r'^software-engineering/$',
         SoftwareEngineeringView.as_view(),
         name='software_engineering',
+    ),
+
+    url(
+        r'^research_engineers/$',
+        ResearchEngineersView.as_view(),
+        name='research_engineers',
     ),
 ]
 
