@@ -17,6 +17,7 @@
                                     <img class="img-responsive" style="width: 400px; height: auto;" src="{{ single_member.photo.url }}" alt="" />
                                 </figure>
                                 <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h4 class="title">{{ single_member.type_member }}</h4>
                                     <p><b>Email: {{ single_member.email }}
                                     {% if single_member.website %} 
                                     | website: <a target="_blank" href="{{ single_member.website }}">{{ single_member.website }} 
