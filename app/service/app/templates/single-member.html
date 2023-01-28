@@ -7,19 +7,19 @@
             <div class="page-wrapper">
                 <header class="page-heading clearfix">
                     <h1 class="heading-title pull-left">{{ single_member.full_name }}</h1>
-                </header> 
+                </header>
             </div>
             <div class="page-content">
                 <div class="row page-row">
-                        <div class="news-wrapper col-md-10 col-sm-7">                         
-                            <article class="news-item page-row has-divider clearfix row">       
+                        <div class="news-wrapper col-md-10 col-sm-7">
+                            <article class="news-item page-row has-divider clearfix row">
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <img class="img-responsive" style="width: 400px; height: auto;" src="{{ single_member.photo.url }}" alt="" />
                                 </figure>
                                 <div class="details col-md-10 col-sm-9 col-xs-8">
                                     {% ifequal single_member.type_member 20 %}
                                         <h4 class="title">Research Engineer</h4>
-                                    {% endifequal %} 
+                                    {% endifequal %}
 
                                     {% ifequal single_member.type_member 30 %}
                                         <h4 class="title">Intern</h4>
@@ -40,7 +40,7 @@
                                     {% ifequal single_member.type_member 70 %}
                                         <h4 class="title">Former Member</h4>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.type_member 80 %}
                                         <h4 class="title">Honorary Research Fellow</h4>
                                     {% endifequal %}
@@ -51,7 +51,7 @@
 
                                     {% ifequal single_member.type_member 100 %}
                                         <h4 class="title">Principal Researcher</h4>
-                                    {% endifequal %} 
+                                    {% endifequal %}
 
                                     {% ifequal single_member.type_member 110 %}
                                         <h4 class="title">Associate Researcher</h4>
@@ -72,7 +72,7 @@
                                     {% ifequal single_member.type_member 150 %}
                                         <h4 class="title">Junior Researcher</h4>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.type_member 160 %}
                                         <h4 class="title">Administrative Assistant</h4>
                                     {% endifequal %}
@@ -90,8 +90,8 @@
                                     {% endifequal %}
 
                                     <p><b>Email: {{ single_member.email }}
-                                    {% if single_member.website %} 
-                                    | website: <a target="_blank" href="{{ single_member.website }}">{{ single_member.website }} 
+                                    {% if single_member.website %}
+                                    | website: <a target="_blank" href="{{ single_member.website }}">{{ single_member.website }}
                                     {% endif %}
                                     </a></b></p>
                                 </div>
@@ -160,7 +160,7 @@
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/301/6684.bib&jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 17 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/217/7819.bib&json=1&jsonp=1"></script>
@@ -175,7 +175,7 @@
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/201/2045.bib&jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 7 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/195/0831.bib&jsonp=1"></script>
@@ -190,22 +190,22 @@
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/180/6201.bib&jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 6 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/195/0864.bib&jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 98 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/service/mendeley/ab671682-19b4-3dc7-aa8e-f674831dab33?jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 20 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/227/6163.bib&jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 23 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/219/9952.bib&jsonp=1"></script>
@@ -240,7 +240,7 @@
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/217/7831.bib&jsonp=1"></script>
                                     {% endifequal %}
-                                    
+
                                     {% ifequal single_member.id 84 %}
                                     <h4 class="title">Publications</h4>
                                     <script src="https://bibbase.org/show?bib=https://dblp.org/pid/277/9577.bib&jsonp=1"></script>
@@ -299,11 +299,20 @@
                                     <h4 class="title">Publications</h4>
                                      <script src="https://bibbase.org/show?bib=https://dblp.org/pid/300/3825.bib&jsonp=1"></script>
                                     {% endifequal %}
-           
+
+                                    {% ifequal single_member.id 105 %}
+                                    <h4 class="title">Publications</h4>
+                                     <script src="https://bibbase.org/service/mendeley/8dfcede1-2f4c-3600-8b67-8b0c1f334b84?jsonp=1"></script>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.id 104 %}
+                                    <h4 class="title">Publications</h4>
+                                     <script src="https://bibbase.org/service/mendeley/69bb98f5-22d4-3d4c-b90c-d86b1be9b454?jsonp=1"></script>
+                                    {% endifequal %}
                                     <!--{% if Publications %}
                                     <h4 class="title">Publications</h4>
                                     <ol>
-                                    {% for Publication in Publications %}         
+                                    {% for Publication in Publications %}
                                         <li><b>{{ Publication.title }} <br></b>
                                         {{ Publication.event_of_publication }}<br />
                                         {{ Publication.author }} <br />
