@@ -271,7 +271,7 @@ urlpatterns = [
     ),
 
     url(
-        r'^artificial-intelligence/$',
+        r'^ai-for-electrical-engineering/$',
         ArtificialIntelligenceView.as_view(),
         name='artificial_intelligence',
     ),
