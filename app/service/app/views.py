@@ -45,15 +45,6 @@ class StudentMembersView(TemplateView):
         return context
 
 
-class FormerMembersView(TemplateView):
-    template_name = 'members_former.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['members'] = Member.objects.all()
-        return context
-
-
 class SingleMemberView(DetailView):
     Model = Member
     context_object_name = 'single_member'
@@ -73,54 +64,6 @@ class SingleMemberView(DetailView):
             member__full_name=Single_Member.full_name).order_by(
             'year', 'id').reverse()
 
-        return context
-
-
-class AssociateMemberView(TemplateView):
-    template_name = 'group-member.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['members'] = Member.objects.filter(
-            type_member=110,
-        )
-        context['members_title'] = 'Associate Researchers'
-        return context
-
-
-class PrincipalMemberView(TemplateView):
-    template_name = 'group-member.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['members'] = Member.objects.filter(
-            type_member=100,
-        )
-        context['members_title'] = 'Principal Researchers'
-        return context
-
-
-class PhdMemberView(TemplateView):
-    template_name = 'group-member.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['members'] = Member.objects.filter(
-            type_member=130,
-        )
-        context['members_title'] = 'PhD Researchers'
-        return context
-
-
-class MasterMemberView(TemplateView):
-    template_name = 'group-member.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['members'] = Member.objects.filter(
-            type_member=140,
-        )
-        context['members_title'] = 'Masters Students'
         return context
 
 
@@ -184,11 +127,6 @@ class SingleProjectView(DetailView):
 
 class ServicesView(TemplateView):
     template_name = 'services.html'
-
-    # def get_context_data(self, **kwargs):
-    #         context = super().get_context_data(**kwargs)
-    #         context['service_info'] = ServiceInfo.objects.all()
-    #         return context
 
 
 class ResearchLineView(TemplateView):
@@ -259,13 +197,6 @@ class ContactFormView(TemplateView):
 
 class GalleryView(TemplateView):
     template_name = 'gallery.html'
-
-    # def get_context_data(self, **kwargs):
-    #         context = super().get_context_data(**kwargs)
-    #         context['galleries'] = Gallery.objects.all()
-    #         context['image'] = Image.objects.all()
-
-    #         return context
 
 
 class SingleGalleryView(DetailView):

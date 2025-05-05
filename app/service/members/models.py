@@ -54,6 +54,20 @@ class Member(models.Model):
         blank=False
     )
 
+    type_member_2 = models.PositiveSmallIntegerField(
+        choices=MEMBER_CHOICES,
+        verbose_name='type of member',
+        null=True,
+        blank=True
+    )
+
+    type_member_3 = models.PositiveSmallIntegerField(
+        choices=MEMBER_CHOICES,
+        verbose_name='type of member',
+        null=True,
+        blank=True
+    )
+
     research_interest = models.TextField(
         verbose_name='research interest'
     )

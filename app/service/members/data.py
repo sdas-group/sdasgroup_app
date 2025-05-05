@@ -1,37 +1,35 @@
-MEMBER_CHOICES_RE = 20
-MEMBER_CHOICES_SR = 40
-MEMBER_CHOICES_PDR = 50
-MEMBER_CHOICES_ET = 60
-MEMBER_CHOICES_FS = 70
-MEMBER_CHOICES_HR = 80
-MEMBER_CHOICES_DS = 90
-MEMBER_CHOICES_PR = 100
-MEMBER_CHOICES_ER = 120
-MEMBER_CHOICES_PS = 130
-MEMBER_CHOICES_MS = 140
-MEMBER_CHOICES_VO = 150
-MEMBER_CHOICES_AA = 160
-MEMBER_CHOICES_WM = 170
-MEMBER_CHOICES_VM = 180
-MEMBER_CHOICES_HG = 190
+MEMBER_CHOICES_NON = 10
+MEMBER_CHOICES_HOG = 20
+MEMBER_CHOICES_ANA = 30
+MEMBER_CHOICES_PCM = 40
+MEMBER_CHOICES_PRE = 50
+MEMBER_CHOICES_SRE = 60
+MEMBER_CHOICES_JRE = 70
+MEMBER_CHOICES_RA3 = 80
+MEMBER_CHOICES_RA2 = 90
+MEMBER_CHOICES_RA1 = 100
+MEMBER_CHOICES_REN = 110
+MEMBER_CHOICES_REV = 120
+MEMBER_CHOICES_HRF = 130
+MEMBER_CHOICES_ECO = 140
+MEMBER_CHOICES_WMA = 150
 
 MEMBER_CHOICES = (
-    (MEMBER_CHOICES_RE, 'Research Engineer'),
-    (MEMBER_CHOICES_SR, 'Senior Researchers'),
-    (MEMBER_CHOICES_PDR, 'Postdoctoral Researchers'),
-    (MEMBER_CHOICES_HR, 'Honorary Research Fellows'),
-    (MEMBER_CHOICES_PR, 'Research Associates'),
-    (MEMBER_CHOICES_ER, 'Collaborator Researchers'),
-    (MEMBER_CHOICES_PS, 'Research Assistants - Level III'),
-    (MEMBER_CHOICES_MS, 'Research Assistants - Level II'),
-    (MEMBER_CHOICES_VO, 'Junior Researchers'),
-    (MEMBER_CHOICES_AA, 'Administrative Assistant'),
-    (MEMBER_CHOICES_WM, 'Web Master'),
-    (MEMBER_CHOICES_VM, 'Volunteer'),
-    (MEMBER_CHOICES_HG, 'Head of the Group'),
-    (MEMBER_CHOICES_DS, 'Research Assistants - Level I'),
-    (MEMBER_CHOICES_FS, 'Former Members'),
-    (MEMBER_CHOICES_ET, 'Analyst'),
+    (MEMBER_CHOICES_NON, 'None'),
+    (MEMBER_CHOICES_HOG, 'Head of the Group'),
+    (MEMBER_CHOICES_ANA, 'Analyst'),
+    (MEMBER_CHOICES_PCM, 'Project Controls Manager'),
+    (MEMBER_CHOICES_PRE, 'Principal Researcher'),
+    (MEMBER_CHOICES_SRE, 'Senior Researcher'),
+    (MEMBER_CHOICES_JRE, 'Junior Researcher'),
+    (MEMBER_CHOICES_RA3, 'Research Assistant - Level III'),
+    (MEMBER_CHOICES_RA2, 'Research Assistant - Level II'),
+    (MEMBER_CHOICES_RA1, 'Research Assistant - Level I'),
+    (MEMBER_CHOICES_REN, 'Research Engineer'),
+    (MEMBER_CHOICES_REV, 'Research Volunteer'),
+    (MEMBER_CHOICES_HRF, 'Honorary Research Fellow'),
+    (MEMBER_CHOICES_ECO, 'External Collaborator'),
+    (MEMBER_CHOICES_WMA, 'Web Master'),
 )
 
 ACTIVE_CHOICES_S = 200

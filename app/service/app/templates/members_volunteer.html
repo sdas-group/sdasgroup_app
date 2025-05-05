@@ -22,7 +22,7 @@
                                 <header class="page-heading clearfix">
                                 </header>
                                 {% for member in members %}
-                                {% ifequal member.type_member 180 %} <!-- Collaborator Researchers -->
+                                {% if member.type_member == 120 or member.type_member == 120 or member.type_member == 120 %} <!-- Researcher Volunteers -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -38,7 +38,7 @@
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endifequal %}
+                                {% endif %}
                                 {% endfor %}
 
                                 <div class="row page-row">

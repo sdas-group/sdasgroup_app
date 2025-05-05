@@ -16,12 +16,7 @@ from service.app.views import CoursesView
 from service.app.views import EventsView
 from service.app.views import StaffMembersView
 from service.app.views import StudentMembersView
-from service.app.views import AssociateMemberView
-from service.app.views import PrincipalMemberView
-from service.app.views import PhdMemberView
-from service.app.views import MasterMemberView
 from service.app.views import VolunteerMemberView
-from service.app.views import FormerMembersView
 from service.app.views import ExternalMemberView
 from service.app.views import GalleryView
 from service.app.views import SingleGalleryView
@@ -79,39 +74,9 @@ urlpatterns = [
     ),
 
     url(
-        r'^associate/$',
-        AssociateMemberView.as_view(),
-        name='associate_members',
-    ),
-
-    url(
-        r'^principal/$',
-        PrincipalMemberView.as_view(),
-        name='principal_members',
-    ),
-
-    url(
-        r'^phd/$',
-        PhdMemberView.as_view(),
-        name='phd_members',
-    ),
-
-    url(
-        r'^master/$',
-        MasterMemberView.as_view(),
-        name='master_members',
-    ),
-
-    url(
         r'^volunteer/$',
         VolunteerMemberView.as_view(),
         name='volunteer_members',
-    ),
-
-    url(
-        r'^former-members/$',
-        FormerMembersView.as_view(),
-        name='former_members',
     ),
 
     url(

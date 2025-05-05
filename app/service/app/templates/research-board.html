@@ -24,7 +24,7 @@
                                 </header>
 
                                 {% for member in members %}
-                                {% ifequal member.type_member 190 %}<!-- Head of the Group -->
+                                {% if member.type_member == 20 or member.type_member_2 == 20 or member.type_member_3 == 20 %}<!-- Head of the Group -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -40,11 +40,11 @@
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endifequal %}
+                                {% endif %}
                                 {% endfor %}
 
                                 {% for member in members %}
-                                {% ifequal member.type_member 100 %}<!-- Principal Researchers -->
+                                {% if member.type_member == 50 or member.type_member_2 == 50 or member.type_member_3 == 50 %}<!-- Principal Researchers -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -60,7 +60,7 @@
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endifequal %}
+                                {% endif %}
                                 {% endfor %}
 
                                 <div class="row page-row">
@@ -69,28 +69,8 @@
                                     <h3 class="title">Senior Researchers</h3>
                                 </header>
 
-                                {% for member in members %}
-                                {% ifequal member.id 15 %}
-                                {% ifequal member.active 200 %}
-                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
-                                    <p> </p>
-                                    <p> </p>
-                                    <p> </p>
-                                    <p> </p>
-                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
-                                </figure>
-                                <div class="details col-md-10 col-sm-9 col-xs-8">
-                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
-                                    <h5 class="title">Email: {{ member.email }} | Senior Researcher</h5>
-                                </div>
-                                <div class="row page-row">
-                                </div>
-                                {% endifequal %}
-                                {% endifequal %}
-                                {% endfor %}
-
                                 {% for member in members %} <!-- Senior researchers -->
-                                {% ifequal member.type_member 40 %}
+                                {% if member.type_member == 60 or member.type_member_2 == 60 or member.type_member_3 == 60 %}
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -106,7 +86,7 @@
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endifequal %}
+                                {% endif %}
                                 {% endfor %}
 
                                 <div class="row page-row">
@@ -115,7 +95,7 @@
                                     <h3 class="title">Junior Researchers</h3>
                                 </header>
                                 {% for member in members %}
-                                {% ifequal member.type_member 150 %}<!-- Degree Students -->
+                                {% if member.type_member == 70 or member.type_member_2 == 70 or member.type_member_3 == 70 %}<!-- Junior Researcher -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -131,27 +111,7 @@
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endifequal %}
-                                {% endfor %}
-
-                                {% for member in members %}
-                                {% ifequal member.id 56 %}<!-- Degree Students -->
-                                {% ifequal member.active 200 %}
-                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
-                                    <p> </p>
-                                    <p> </p>
-                                    <p> </p>
-                                    <p> </p>
-                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
-                                </figure>
-                                <div class="details col-md-10 col-sm-9 col-xs-8">
-                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
-                                    <h5 class="title">Email: {{ member.email }} | Junior Researcher</h5>
-                                </div>
-                                <div class="row page-row">
-                                </div>
-                                {% endifequal %}
-                                {% endifequal %}
+                                {% endif %}
                                 {% endfor %}
 
                             </article><!--//news-item-->

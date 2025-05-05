@@ -23,7 +23,7 @@
                                 </header>
 
                                 {% for member in members %}
-                                {% ifequal member.type_member 80 %}<!-- Honorary Member -->
+                                {% if member.type_member == 130 or member.type_member_2 == 130 or member.type_member_3 == 130 %}<!-- Honorary Member -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -39,7 +39,7 @@
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endifequal %}
+                                {% endif %}
                                 {% endfor %}
 
                             </article>

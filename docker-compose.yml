@@ -20,6 +20,7 @@ services:
       service: app
     environment:
       - DJANGO_SETTINGS_MODULE=service.settings.dev_settings
+    command: sh ./scripts/dev.sh
     build:
       args:
         - DJANGO_ENV=dev

@@ -33,6 +33,8 @@ class MembersAdmin(admin.ModelAdmin):
                 'website',
                 'description',
                 'type_member',
+                'type_member_2',
+                'type_member_3',
                 'research_interest',
                 'active',
                 'slug',
