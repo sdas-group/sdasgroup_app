@@ -26,6 +26,12 @@ class Member(models.Model):
         blank=False,
     )
 
+    publications_url = models.CharField(
+        verbose_name='URL of publications',
+        max_length=250,
+        blank=True,
+    )
+
     photo = models.ImageField(
         max_length=256,
         null=False,
@@ -134,7 +140,7 @@ class Publication(models.Model):
     )
 
     def __str__(self):
-        return self.title
+        return self.titles
 
     class Meta:
         verbose_name = 'Publication'

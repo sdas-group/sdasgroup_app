@@ -30,6 +30,7 @@ class MembersAdmin(admin.ModelAdmin):
                 'full_name',
                 'email',
                 'photo',
+                'publications_url',
                 'website',
                 'description',
                 'type_member',
