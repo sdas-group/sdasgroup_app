@@ -18,75 +18,59 @@
                                 </figure>
                                 <div class="details col-md-10 col-sm-9 col-xs-8">
                                     {% ifequal single_member.type_member 20 %}
-                                        <h4 class="title">Research Engineer</h4>
+                                        <h4 class="title">Head of the Group</h4>
                                     {% endifequal %}
 
                                     {% ifequal single_member.type_member 30 %}
-                                        <h4 class="title">Intern</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 40 %}
-                                        <h4 class="title">Senior Researcher</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 50 %}
-                                        <h4 class="title">Postdoctoral Researcher</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 60 %}
                                         <h4 class="title">Analyst</h4>
                                     {% endifequal %}
 
-                                    {% ifequal single_member.type_member 70 %}
-                                        <h4 class="title">Former Member</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 80 %}
-                                        <h4 class="title">Honorary Research Fellow</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 90 %}
-                                        <h4 class="title">Research Assistant - Level I</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 100 %}
-                                        <h4 class="title">Principal Researcher</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 110 %}
-                                        <h4 class="title">Associate Researcher</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 120 %}
-                                        <h4 class="title">External Collaborator</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 130 %}
-                                        <h4 class="title">Research Assistant - Level III</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 140 %}
-                                        <h4 class="title">Research Assistant - Level II</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 150 %}
-                                        <h4 class="title">Junior Researcher</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 160 %}
-                                        <h4 class="title">Administrative Assistant</h4>
-                                    {% endifequal %}
-
-                                    {% ifequal single_member.type_member 170 %}
+                                    {% ifequal single_member.type_member 40 %}
                                         <h4 class="title">Project Controls Manager</h4>
                                     {% endifequal %}
 
-                                    {% ifequal single_member.type_member 180 %}
-                                        <h4 class="title">Volunteer</h4>
+                                    {% ifequal single_member.type_member 50 %}
+                                        <h4 class="title">Principal Researcher</h4>
                                     {% endifequal %}
 
-                                    {% ifequal single_member.type_member 190 %}
-                                        <h4 class="title">Head of the Group</h4>
+                                    {% ifequal single_member.type_member 60 %}
+                                        <h4 class="title">Senior Researcher</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 70 %}
+                                        <h4 class="title">Junior Researcher</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 80 %}
+                                        <h4 class="title">Research Assistant - Level III</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 90 %}
+                                        <h4 class="title">Research Assistant - Level II</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 100 %}
+                                        <h4 class="title">Research Assistant - Level I</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 110 %}
+                                        <h4 class="title">Research Engineer</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 120 %}
+                                        <h4 class="title">Research Volunteer</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 130 %}
+                                        <h4 class="title">Honorary Research Fellow</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 140 %}
+                                        <h4 class="title">External Collaborator</h4>
+                                    {% endifequal %}
+
+                                    {% ifequal single_member.type_member 150 %}
+                                        <h4 class="title">Web Master</h4>
                                     {% endifequal %}
 
                                     <p><b>Email: {{ single_member.email }}
@@ -321,32 +305,6 @@
                                     <h4 class="title">Publications (may take some time to be displayed)</h4>
                                      <script src="https://bibbase.org/service/mendeley/b221d53b-b3ee-3178-a94d-c4b305de9d40?jsonp=1"></script>
                                     {% endifequal %}
-                                    <!--{% if Publications %}
-                                    <h4 class="title">Publications</h4>
-                                    <ol>
-                                    {% for Publication in Publications %}
-                                        <li><b>{{ Publication.title }} <br></b>
-                                        {{ Publication.event_of_publication }}<br />
-                                        {{ Publication.author }} <br />
-                                        <a href="#member_modal_{{ Publication.id }}" role="button" data-toggle="modal">See abstract |</a><a target="_blank" href="{{ Publication.url_publication }}"> see full paper</a>
-
-                                        <div id="member_modal_{{ Publication.id }}" class="modal">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title">Abstract</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>{{ Publication.abstract }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    {% endfor %}
-                                    {% endif %}
-                                    </ol>-->
                                 </div>
                             </article><!--//news-item-->
                         </div>
