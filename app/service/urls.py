@@ -42,6 +42,8 @@ from service.app.views import HumanMachineInteractionView
 from service.app.views import MedicalDataAnalysisView
 from service.app.views import SoftwareEngineeringView
 from service.app.views import ResearchEngineersView
+from service.app.views import PartnershipView
+from service.app.views import CendecytView
 
 admin.site.site_title = 'SDAS Group'
 admin.site.site_header = 'SDAS Group - Administrator'
@@ -284,6 +286,18 @@ urlpatterns = [
         r'^research_engineers/$',
         ResearchEngineersView.as_view(),
         name='research_engineers',
+    ),
+
+    url(
+        r'^partnership/$',
+        PartnershipView.as_view(),
+        name='partnership',
+    ),
+
+    url(
+        r'^cendecyt/$',
+        CendecytView.as_view(),
+        name='cendecyt',
     ),
 ]
 

@@ -28,6 +28,16 @@
     {% block css %}{% endblock %}
 </head>
 
+<!-- Google Analytics: Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLY7RD0PF5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLY7RD0PF5');
+</script>
+
 <body class="home-page">
     <div class="wrapper">
 
@@ -158,16 +168,25 @@
                         <li class="nav-item">
                             <a href="{% url 'gallery' %}">Gallery</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{% url 'repositories' %}">Repositories & software</a>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Education<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'repositories' %}">Course & Events</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'courses' %}">Repositories & software</a>
+                                </li>
+                            </ul>
                         </li>
                         <!--
                         <li class="nav-item">
-                            <a href="{% url 'services' %}">Services</a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a href="{% url 'courses' %}">Courses & Events</a>
+                            <a href="{% url 'partnership' %}">Partnership</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{% url 'cendecyt' %}">Cendecyt</a>
+                        </li>
+                        -->
                         <li class="nav-item">
                             <a href="{% url 'contact' %}">Contact</a>
                         </li>

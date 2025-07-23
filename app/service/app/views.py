@@ -367,3 +367,9 @@ class ResearchEngineersView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['members'] = Member.objects.all()
         return context
+
+class PartnershipView(TemplateView):
+    template_name = 'partnership.html'
+
+class CendecytView(TemplateView):
+    template_name = 'cendecyt.html'
