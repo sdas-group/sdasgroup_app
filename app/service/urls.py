@@ -14,6 +14,7 @@ from service.app.views import ContactView
 from service.app.views import ContactSuccessView
 from service.app.views import CoursesView
 from service.app.views import EventsView
+from service.app.views import AllSdasersView
 from service.app.views import StaffMembersView
 from service.app.views import StudentMembersView
 from service.app.views import VolunteerMemberView
@@ -61,6 +62,12 @@ urlpatterns = [
         r'^$',
         HomeView.as_view(),
         name='home',
+    ),
+
+    url(
+        r'^all-sdasers/$',
+        AllSdasersView.as_view(),
+        name='all_sdaser',
     ),
 
     url(

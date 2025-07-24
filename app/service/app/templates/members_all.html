@@ -1,0 +1,274 @@
+{% extends "layout/index.html" %}
+{% load static %}
+
+{% block title %}Members{% endblock %}
+
+{% block content %}
+            <div class="page-wrapper">
+                <header class="page-heading clearfix">
+                    <h1 class="heading-title pull-left">All SDASers</h1>
+                    <div class="breadcrumbs pull-right">
+                        <ul class="breadcrumbs-list">
+                            <li><a href="/">Home</a><i class="fa fa-angle-right"></i></li>
+                            <li class="current">Members: All SDASers</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
+            <div class="page-content">
+                <div class="row page-row">
+                        <div class="news-wrapper col-md-10 col-sm-7">
+                            <article class="news-item page-row has-divider clearfix row">
+                                <header class="page-heading clearfix">
+                                    <h3 class="heading-title pull-left">Head of the Group</h3>
+                                </header>
+
+                                {% for member in members %}
+                                {% ifequal member.type_member 20 %}<!-- Head of the Group -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Head of the Group</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Research Associate</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 20 or member.type_member_2 == 20 or member.type_member_3 == 20 %}<!-- Head of the Group -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Head of the Group</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Senior Researchers</h3>
+                                </header>
+                                {% for member in members %} <!-- Senior researchers -->
+                                {% if member.type_member == 60 or member.type_member_2 == 60 or member.type_member_3 == 60 %}
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Senior Researcher</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Junior Researchers</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 70 or member.type_member_2 == 70 or member.type_member_3 == 70 %}<!-- Junior Researcher -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Junior Researcher</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Research Engineers</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 110 or member.type_member_2 == 110 or member.type_member_3 == 110 %}
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a target="_blank" href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} |  Research Engineer</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Research Assistants</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 80 or member.type_member_2 == 80 or member.type_member_3 == 80 %}<!-- PhD Students se cambian por research assistant level III-->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Research Assistant - Level III</h5> <!-- PhD Students se cambia por research assistant level III-->
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% if member.type_member == 90 or member.type_member_2 == 90 or member.type_member_3 == 90 %}<!-- Masters Students se cambia por Research Assistants - Level II -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Research Assistant - Level II</h5><!-- Masters Students se cambia por Research Assistants - Level II -->
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                {% for member in members %}
+                                {% if member.type_member == 100 or member.type_member_2 == 100 or member.type_member_3 == 100 %}<!-- Degree Students se cambia por Research Assistants - Level I-->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Research Assistant - Level I</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Research Volunteers</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 120 or member.type_member == 120 or member.type_member == 120 %} <!-- Researcher Volunteers -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Research Volunteer</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Honorary Research Fellows</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 130 or member.type_member_2 == 130 or member.type_member_3 == 130 %}<!-- Honorary Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Honorary Research Fellows</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">External Collaborators</h3>
+                                </header>
+                                {% for member in members %}
+                                {% ifequal member.type_member 140 %}<!-- External Member -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | External Collaborator</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endifequal %}
+                                {% endfor %}
+
+                            </article><!--//news-item-->
+                        </div>
+                </div>
+            </div>
+{% endblock content %}

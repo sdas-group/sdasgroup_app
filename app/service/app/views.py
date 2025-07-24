@@ -36,6 +36,15 @@ class StaffMembersView(TemplateView):
         return context
 
 
+class AllSdasersView(TemplateView):
+    template_name = 'members_all.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['members'] = Member.objects.all()
+        return context
+
+
 class StudentMembersView(TemplateView):
     template_name = 'members_students.html'
 
