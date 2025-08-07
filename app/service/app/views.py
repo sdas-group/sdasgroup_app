@@ -13,6 +13,7 @@ from service.groupinformation.models import CourseInfo
 from service.groupinformation.models import EventInfo
 from service.groupinformation.models import Gallery
 from service.groupinformation.models import Image
+from service.groupinformation.models import Scholarship
 from service.members.models import Member
 from service.members.models import Publication
 from service.app.forms import ContactForm
@@ -287,6 +288,12 @@ class DocumentationView(TemplateView):
 
 class ScholarshipsView(TemplateView):
     template_name = 'scholarships.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['scholarships'] = Scholarship.objects.all().order_by(
+            'id').reverse()
+        return context
 
 
 class AllPublicationsView(TemplateView):

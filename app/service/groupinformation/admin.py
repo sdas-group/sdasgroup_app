@@ -9,6 +9,7 @@ from .models import Repository
 from .models import CourseInfo
 from .models import Gallery
 from .models import Image
+from .models import Scholarship
 
 
 @admin.register(HomeInfo)
@@ -287,6 +288,43 @@ class ImageAdmin(admin.ModelAdmin):
             'fields': (
                 'image',
                 'album',
+            ),
+        }),
+    )
+
+@admin.register(Scholarship)
+class ScholarshipAdmin(admin.ModelAdmin):
+    def has_delete_permission(self, request, obj=None):
+        return True
+
+    def has_add_permission(self, request, obj=None):
+        return True
+
+    def get_actions(self, request):
+        actions = super().get_actions(request)
+        if 'delete_selected' in actions:
+            del actions['delete_selected']
+        return actions
+
+    list_display = (
+        'reference',
+        'description'
+    )
+
+    fieldsets = (
+        ('image item', {
+            'fields': (
+                'reference',
+                'status',
+                'publication_date',
+                'deadline_date',
+                'type',
+                'description',
+                'duration',
+                'duties',
+                'application',
+                'starting_date',
+                'country'
             ),
         }),
     )

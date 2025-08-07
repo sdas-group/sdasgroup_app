@@ -5,6 +5,8 @@ from .data import REPOSITORY_CHOICES
 from .data import COURSE_CHOICES
 from .data import LINE_CHOICES
 from .data import PROJECT_CHOICES
+from .data import SCHOLARSHIP_CHOICES
+from .data import SCHOLARSHIP_TYPES
 
 
 class HomeInfo(models.Model):
@@ -287,4 +289,82 @@ class Image(models.Model):
     class Meta:
         verbose_name = 'Image'
         verbose_name_plural = 'Images'
+        ordering = ('id',)
+
+
+class Scholarship(models.Model):
+    reference = models.TextField(
+        max_length=70,
+        null=False,
+        blank=False,
+        verbose_name='Reference',
+    )
+
+    status = models.PositiveSmallIntegerField(
+        choices=SCHOLARSHIP_CHOICES,
+        verbose_name='Status',
+        null=False,
+        blank=False,
+    )
+
+    publication_date = models.DateField(
+        verbose_name='Publication Date',
+    )
+
+    deadline_date = models.DateField(
+        verbose_name='Deadline Date',
+    )
+
+    type = models.PositiveSmallIntegerField(
+        choices=SCHOLARSHIP_TYPES,
+        verbose_name='Type of Scholarship',
+        null=False,
+        blank=False,
+    )
+
+    description = models.TextField(
+        max_length=1000,
+        null=False,
+        blank=False,
+        verbose_name='Description',
+    )
+
+    duration = models.TextField(
+        max_length=200,
+        null=False,
+        blank=False,
+        verbose_name='Duration',
+    )
+
+    duties = models.TextField(
+        max_length=3000,
+        null=False,
+        blank=False,
+        verbose_name='Duties',
+    )
+
+    application = models.TextField(
+        max_length=3000,
+        null=False,
+        blank=False,
+        verbose_name='Application',
+    )
+
+    starting_date = models.DateField(
+        verbose_name='Starting Date',
+    )
+
+    country = models.TextField(
+        max_length=100,
+        null=False,
+        blank=False,
+        verbose_name='Country',
+    )
+
+    def __str__(self):
+        return ''.format(self.id)
+
+    class Meta:
+        verbose_name = 'Scholarship'
+        verbose_name_plural = 'Scholarships'
         ordering = ('id',)
