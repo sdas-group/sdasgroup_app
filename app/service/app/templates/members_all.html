@@ -44,11 +44,10 @@
                                 {% endfor %}
 
                                 <header class="page-heading clearfix">
-                                    <h3 class="title">Research Associate</h3>
+                                    <h3 class="title">Project Controls Managers</h3>
                                 </header>
-                                
                                 {% for member in members %}
-                                {% if member.type_member == 50 %}<!-- Principal Researchers -->
+                                {% ifequal member.type_member 40 %}<!-- Project Controls Managers -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -59,12 +58,12 @@
                                 </figure>
                                 <div class="details col-md-10 col-sm-9 col-xs-8">
                                     <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
-                                    <h5 class="title">Email: {{ member.email }} | Principal Researcher</h5>
+                                    <h5 class="title">Email: {{ member.email }} | Project Controls Manager</h5>
                                 </div>
                                 <div class="row page-row">
                                 </div>
                                 {% endifequal %}
-                                {% endif %}
+                                {% endifequal %}
                                 {% endfor %}
 
                                 <header class="page-heading clearfix">
