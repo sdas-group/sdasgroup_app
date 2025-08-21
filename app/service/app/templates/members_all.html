@@ -47,7 +47,7 @@
                                     <h3 class="title">Research Associate</h3>
                                 </header>
                                 {% for member in members %}
-                                {% if member.type_member == 20 or member.type_member_2 == 20 or member.type_member_3 == 20 %}<!-- Head of the Group -->
+                                {% if member.type_member == 20 %}<!-- Head of the Group -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -67,7 +67,7 @@
                                 {% endfor %}
 
                                 {% for member in members %}
-                                {% if member.type_member == 50 or member.type_member_2 == 50 or member.type_member_3 == 50 %}<!-- Principal Researchers -->
+                                {% if member.type_member == 50 %}<!-- Principal Researchers -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -90,7 +90,7 @@
                                     <h3 class="title">Senior Researchers</h3>
                                 </header>
                                 {% for member in members %} <!-- Senior researchers -->
-                                {% if member.type_member == 60 or member.type_member_2 == 60 or member.type_member_3 == 60 %}
+                                {% if member.type_member == 60 %}
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -113,7 +113,7 @@
                                     <h3 class="title">Junior Researchers</h3>
                                 </header>
                                 {% for member in members %}
-                                {% if member.type_member == 70 or member.type_member_2 == 70 or member.type_member_3 == 70 %}<!-- Junior Researcher -->
+                                {% if member.type_member == 70 %}<!-- Junior Researcher -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -136,7 +136,7 @@
                                     <h3 class="title">Research Engineers</h3>
                                 </header>
                                 {% for member in members %}
-                                {% if member.type_member == 110 or member.type_member_2 == 110 or member.type_member_3 == 110 %}
+                                {% if member.type_member == 110 %}
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -159,7 +159,7 @@
                                     <h3 class="title">Research Assistants</h3>
                                 </header>
                                 {% for member in members %}
-                                {% if member.type_member == 80 or member.type_member_2 == 80 or member.type_member_3 == 80 %}<!-- PhD Students se cambian por research assistant level III-->
+                                {% if member.type_member == 80 %}<!-- PhD Students se cambian por research assistant level III-->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -179,7 +179,7 @@
                                 {% endfor %}
 
                                 {% for member in members %}
-                                {% if member.type_member == 90 or member.type_member_2 == 90 or member.type_member_3 == 90 %}<!-- Masters Students se cambia por Research Assistants - Level II -->
+                                {% if member.type_member == 90 %}<!-- Masters Students se cambia por Research Assistants - Level II -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -199,7 +199,7 @@
                                 {% endfor %}
 
                                 {% for member in members %}
-                                {% if member.type_member == 100 or member.type_member_2 == 100 or member.type_member_3 == 100 %}<!-- Degree Students se cambia por Research Assistants - Level I-->
+                                {% if member.type_member == 100 %}<!-- Degree Students se cambia por Research Assistants - Level I-->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -222,7 +222,7 @@
                                     <h3 class="title">Research Volunteers</h3>
                                 </header>
                                 {% for member in members %}
-                                {% if member.type_member == 120 or member.type_member == 120 or member.type_member == 120 %} <!-- Researcher Volunteers -->
+                                {% if member.type_member == 120 %} <!-- Researcher Volunteers -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
@@ -245,7 +245,7 @@
                                     <h3 class="title">Honorary Research Fellows</h3>
                                 </header>
                                 {% for member in members %}
-                                {% if member.type_member == 130 or member.type_member_2 == 130 or member.type_member_3 == 130 %}<!-- Honorary Member -->
+                                {% if member.type_member == 130 %}<!-- Honorary Member -->
                                 {% ifequal member.active 200 %}
                                 <figure class="thumb col-md-2 col-sm-3 col-xs-4">
                                     <p> </p>
