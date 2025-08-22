@@ -65,9 +65,9 @@ urlpatterns = [
     ),
 
     url(
-        r'^all-sdasers/$',
+        r'^all-team/$',
         AllSdasersView.as_view(),
-        name='all_sdaser',
+        name='all_team',
     ),
 
     url(
