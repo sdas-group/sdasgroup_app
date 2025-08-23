@@ -66,6 +66,31 @@
                                 {% endifequal %}
                                 {% endfor %}
 
+                                <div class="row page-row">
+                                </div>
+                                <header class="page-heading clearfix">
+                                    <h3 class="title">Analysts</h3>
+                                </header>
+                                {% for member in members %}
+                                {% if member.type_member == 30 or member.type_member_2 == 30 or member.type_member_3 == 30 %} <!-- Analyst -->
+                                {% ifequal member.active 200 %}
+                                <figure class="thumb col-md-2 col-sm-3 col-xs-4">
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <p> </p>
+                                    <img src="{{ member.photo.url }}" style="width: 90px; height: 100px;" class="img-responsive" alt=""/>
+                                </figure>
+                                <div class="details col-md-10 col-sm-9 col-xs-8">
+                                    <h3 class="title"><a href="{% url 'single_member' member.slug %}">{{ member.full_name }}</a></h3>
+                                    <h5 class="title">Email: {{ member.email }} | Analyst</h5>
+                                </div>
+                                <div class="row page-row">
+                                </div>
+                                {% endifequal %}
+                                {% endif %}
+                                {% endfor %}
+
                                 <header class="page-heading clearfix">
                                     <h3 class="title">Senior Researchers</h3>
                                 </header>
