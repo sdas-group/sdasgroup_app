@@ -296,7 +296,7 @@ class ScholarshipsView(TemplateView):
         return context
 
 
-class AllPublicationsView(TemplateView):
+class OurPublicationsView(TemplateView):
     template_name = 'all_publications.html'
 
     def get_context_data(self, **kwargs):
@@ -317,7 +317,7 @@ class EventsView(TemplateView):
         return context
 
 
-class ResearchTopicsView(TemplateView):
+class OurAreasView(TemplateView):
     template_name = 'research-topics.html'
 
 

@@ -22,8 +22,8 @@ from service.app.views import ExternalMemberView
 from service.app.views import GalleryView
 from service.app.views import SingleGalleryView
 from service.app.views import DocumentationView
-from service.app.views import AllPublicationsView
-from service.app.views import ResearchTopicsView
+from service.app.views import OurPublicationsView
+from service.app.views import OurAreasView
 from service.app.views import HonoraryMemberView
 from service.app.views import TermsofuseView
 from service.app.views import AboutView
@@ -191,15 +191,15 @@ urlpatterns = [
     ),
 
     url(
-        r'^allpublications/$',
-        AllPublicationsView.as_view(),
-        name='allpublications',
+        r'^ourpublications/$',
+        OurPublicationsView.as_view(),
+        name='ourpublications',
     ),
 
     url(
-        r'^researchtopics/$',
-        ResearchTopicsView.as_view(),
-        name='research_topics',
+        r'^our_areas/$',
+        OurAreasView.as_view(),
+        name='our_areas',
     ),
 
     url(

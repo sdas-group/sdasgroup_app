@@ -135,10 +135,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Research <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'research_topics' %}">Research Programs</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.researchgate.net/lab/SDAS-Group-Diego-Peluffo" target="_blank">Research Gate Profile</a>
+                                    <a class="dropdown-item" href="{% url 'our_areas' %}">Our Areas</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{% url 'projects' %}">Projects</a>
@@ -150,15 +147,18 @@
                                     <a class="dropdown-item" href="{% url 'call_for_projects' %}">Call for projects</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'allpublications' %}">All Publications</a>
+                                    <a class="dropdown-item" href="{% url 'ourpublications' %}">Our Publications</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Information<i class="fa fa-angle-down"></i></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Resources<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'manifiesto' %}">A word by our Founder</a>
+                                    <a class="dropdown-item" href="{% url 'courses' %}">Course & Events</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="{% url 'documentation' %}">Documentation</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{% url 'gallery' %}">Gallery</a>
@@ -167,7 +167,7 @@
                                     <a class="dropdown-item" href="{% url 'material' %}">Material</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'documentation' %}">Documentation</a>
+                                    <a class="dropdown-item" href="{% url 'repositories' %}">Repositories & software</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="{% url 'termsofuse' %}">Terms of Use</a>
@@ -178,19 +178,19 @@
                             <a href="{% url 'gallery' %}">Gallery</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Education<i class="fa fa-angle-down"></i></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="javascript:void(null);">Services<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'repositories' %}">Course & Events</a>
+                                    <a class="dropdown-item" href="{% url 'courses' %}">Course & Events</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="{% url 'courses' %}">Repositories & software</a>
+                                    <a class="dropdown-item" href="{% url 'repositories' %}">Repositories & software</a>
                                 </li>
                             </ul>
                         </li>
                         <!--
                         <li class="nav-item">
-                            <a href="{% url 'partnership' %}">Partnership</a>
+                            <a href="{% url 'partnership' %}">Services</a>
                         </li>
                         <li class="nav-item">
                             <a href="{% url 'cendecyt' %}">Cendecyt</a>
