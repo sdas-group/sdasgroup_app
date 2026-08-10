@@ -309,7 +309,7 @@ urlpatterns = [
     ),
 
     url(
-        r'^phdthesis/$',
+        r'^phdtheses/$',
         PhdthesisView.as_view(),
         name='phdthesis',
     ),
