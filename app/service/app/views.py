@@ -28,6 +28,10 @@ class HomeView(TemplateView):
         return context
 
 
+class PhdthesisView(TemplateView):
+    template_name = 'phdthesis.html'
+
+
 class StaffMembersView(TemplateView):
     template_name = 'members_staff.html'
 

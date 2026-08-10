@@ -45,6 +45,7 @@ from service.app.views import SoftwareEngineeringView
 from service.app.views import ResearchEngineersView
 from service.app.views import PartnershipView
 from service.app.views import CendecytView
+from service.app.views import PhdthesisView
 
 admin.site.site_title = 'SDAS Group'
 admin.site.site_header = 'SDAS Group - Administrator'
@@ -305,6 +306,12 @@ urlpatterns = [
         r'^cendecyt/$',
         CendecytView.as_view(),
         name='cendecyt',
+    ),
+
+    url(
+        r'^phdthesis/$',
+        PhdthesisView.as_view(),
+        name='phdthesis',
     ),
 ]
 
